@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #23242A;
+            color: white;
+        }
+
+        .box {
+            border-radius: 8px;
+            background: #1c1c1c;
+            padding: 1%;
+            height: 430px;
+            width: 400px;
+            z-index: 10;
+            overflow: hidden;
+        }
+
+        .box::before,
+        .box::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+            transform-origin: bottom right;
+            animation: animated 6s linear infinite;
+        }
+
+        .box::after {
+            animation-delay: -3s;
+        }
+
+        @keyframes animated {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        form {
+            position: absolute;
+            inset: 2px;
+            border-radius: 8px;
+            background: #28292d;
+            z-index: 10;
+            padding: 50px 40px;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+
+        .form-group {
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group label {
+            font-size: small;
+            font-weight: bold;
+            color: white;
+        }
+
+        .form-group input {
+            font-size: 0.7rem;
+        }
+
+        button.btn {
+            background: #45f3ff;
+            color: black;
+            font-weight: bold;
+            margin-top: 3%;
+        }
+
+        button.btn:hover {
+            background: #45fdff;
+            color: black;
+        }
+
+        p span {
+            color: white;
+            border: 1px solid white;
+            padding: 2%;
+        }
+
+        p span i {
+            border: 1px solid white;
+            padding: 1%;
+            border-radius: 50%;
+            margin-right: 2%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="box col-sm-4 m-auto">
+                <form action="" id="loginform">
+                    <h3 class="text-center text-white">LOGIN</h3>
+
+                    <div class="form-group">
+                        <label for="email">Email Id: </label>
+                        <input type="email" name="email" id="email" placeholder="Enter Your Email Id"
+                            class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password : </label>
+                        <input type="password" name="password" id="password" placeholder="Enter Your Password"
+                            class="form-control" />
+                    </div>
+
+                    <button type="submit" class="btn form-control">LOGIN</button>
+
+                    <p class="text-white text-center mt-4">Don't Have An Account ? <a href="register.html"
+                            class="text-white font-weight-bold">Register
+                            Here</a></p>
+
+                    <p class="text-center mt-3">
+                        <span><i class="fa fa-google" aria-hidden="true"></i>GOOGLE</span>
+                        <span><i class="fa fa-facebook" aria-hidden="true"></i>FACEBOOK</span>
+                    </p>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- font awesome -->
+    <script src="https://use.fontawesome.com/6197e43c13.js"></script>
+
+    <script>
+
+        document.getElementById("loginform").addEventListener('submit', function (event) {
+          event.preventDefault();
+    
+          const email = document.getElementById("email").value.trim();
+          const password = document.getElementById("password").value.trim();
+    
+          if (email == '' || password == '') {
+    
+            alert("Please fill all the fields");
+    
+          } else {
+    
+            // email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+            if (!emailRegex.test(email)) {
+    
+              alert("Enter a valid email address");
+    
+            } else {
+    
+              // password validation
+              if (password.length < 8) {
+    
+                alert("Password should be 8 character long");
+    
+              } else {
+    
+                // All validation checked redirect to home page
+                window.location.href = "index.html";
+    
+              }
+            }
+          }
+    
+    
+    
+    
+        })
+    
+      </script>
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand {
+    font-size: x-large;
+    font-weight: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.navbar-brand span {
+    color: #FCA501;
+    text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000, 1px 1px 1px #000;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+    color: black;
+    font-weight: 500;
+    font-family: serif;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover {
+    color: burlywood;
+}
+
+.main-content {
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://wallpapers.com/images/hd/paris-autumn-leaves-pap4ks024vlf9ah7.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#visitPlace {
+    color: #ffecb5;
+    text-transform: uppercase;
+    text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000, 1px 1px 1px #000;
+}
+
+h1 span {
+    color: #FCA501;
+    text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000, 1px 1px 1px #000;
+}
+
+#star {
+    color: #FCA501;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social-icons i{
+    padding: 10px;
+    margin: 0 1%;
+    font-size: 1.3rem;
+    background-color: black;
+    color: white;
+    /* border: 1px solid black; */
+    border-radius: 30%;
+}
+
+#card-img-top {
+    opacity: 0.6;
+    transition: transform 0.3s ease;
+}
+
+#card-img-top:hover {
+    transform: scale(1.15);
+    opacity: 1;
+    cursor: pointer;
+}

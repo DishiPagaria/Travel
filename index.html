@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- external css -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md bg-light navbar-light">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">
+                <img src="https://cdn.airbit.com/artwork/80299_14456468950_3066654@300x.jpg" alt="Logo" class="mr-2" height="30px">
+                <span>T</span>RAVEL
+            </a>
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#book">Book</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Packages
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#packages">United States</a>
+                            <a class="dropdown-item" href="#packages">India</a>
+                            <a class="dropdown-item" href="#packages">France</a>
+                            <a class="dropdown-item" href="#packages">Germany</a>
+                            <a class="dropdown-item" href="#packages">New-York</a>
+                            <a class="dropdown-item" href="#packages">Paris</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                </ul>
+
+                <form class="form-inline ml-auto">
+                    <a href="login.html" class="btn btn-warning btn-sm mr-sm-2">Login</a>
+                    <a href="register.html" class="btn btn-outline-dark btn-sm mr-sm-2">Registration</a>
+                </form>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- content goes here -->
+        <div class="main-content mb-3">
+            <h3>Welcome to World</h3>
+            <h1>Visit <span id="visitPlace"> PlaceName</span> </h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            <button type="button" class="btn btn-light">Book Place</button>
+        </div>
+
+        <!-- book page content goes here -->
+        <div class="container-fluid mt-5 mb-5 booking-section" id="book">
+            <h1 class="text-center"><span>B</span>OOK</h1>
+            <div class="row mt-4">
+                <div class="col-md-6 col-sm-12">
+                    <img src="https://wallpapers.com/images/high/best-travel-desktop-62yqh8fu0hlukdf1.webp" alt=""
+                        srcset="" width="100%" height="500px">
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <form>
+
+                        <div class="form-group">
+                            <label for="whereto">Where to : </label>
+                            <select name="whereto" id="whereto" class="form-control">
+                                <option value="">Where To</option>
+                                <option value="United States">United States</option>
+                                <option value="India">India</option>
+                                <option value="New York">New York</option>
+                                <option value="Germany">Germany</option>
+                                <option value="Dubai">Dubai</option>
+                                <option value="Paris">Paris</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="persons">How Many Persons : </label>
+                            <input type="text" class="form-control" name="persons" id="persons"
+                                placeholder="How Many Person">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="start">Start Date : </label>
+                            <input type="date" class="form-control" id="startdate" name="start">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="end">End Date : </label>
+                            <input type="date" class="form-control" id="enddate" name="end">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Description : </label>
+                            <textarea class="form-control" name="description" id="description"
+                                placeholder="Enter Your Name And Details" rows="3" minlength="50"
+                                maxlength="500"></textarea>
+                        </div>
+
+                        <button type="button" id="booking" onclick="bookNow()"
+                            class="btn btn-warning btn-sm mr-sm-2 px-5 text-white">Book
+                            Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- packages page content goes here -->
+        <div class="container mb-5 mt-5 package-section" id="packages">
+            <h1 class="text-center"><span>P</span>ACKAGES</h1>
+            <div class="row">
+
+                <div class="col-md-4 col-sm-6 mt-3">
+                    <div class="card">
+                        <img src="https://wallpapercave.com/wp/wp5727818.jpg" class="card-img-top" alt="UK"
+                            height="200px">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>UNITED KINGDOM</b></h4>
+                            <small class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
+                            <div id="star">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </div>
+                            <h5>Price : <b>$500.00</b></h5>
+                            <button type="button" class="btn btn-warning btn-sm mr-sm-2 text-white">Book
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mt-3">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1605130284535-11dd9eedc58a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8N3x8fGVufDB8fHx8fA%3D%3D"
+                            class="card-img-top" alt="US" height="200px">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>UNITED STATES</b></h4>
+                            <small class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
+                            <div id="star">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </div>
+                            <h5>Price : <b>$650.50</b></h5>
+                            <button type="button" class="btn btn-warning btn-sm mr-sm-2 text-white">Book
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mt-3">
+                    <div class="card">
+                        <img src="https://4kwallpapers.com/images/wallpapers/new-york-city-empire-state-building-cityscape-skyline-4480x2520-7284.jpg"
+                            class="card-img-top" alt="new-york" height="200px">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>NEW YORK</b></h4>
+                            <small class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
+                            <div id="star">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </div>
+                            <h5>Price : <b>$580.50</b></h5>
+                            <button type="button" class="btn btn-warning btn-sm mr-sm-2 text-white">Book
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mt-3">
+                    <div class="card">
+                        <img src="https://i.pinimg.com/originals/3c/79/7f/3c797fdf8bb4f54d899e07d6103d2348.jpg"
+                            class="card-img-top" alt="india" height="200px">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>INDIA</b></h4>
+                            <small class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
+                            <div id="star">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                            </div>
+                            <h5>Price : <b>$400.00</b></h5>
+                            <button type="button" class="btn btn-warning btn-sm mr-sm-2 text-white">Book
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mt-3">
+                    <div class="card">
+                        <img src="https://s7g10.scene7.com/is/image/stena/20150820_berlin-brandenburg-gate:16-9?ts=1643921151469&dpr=off"
+                            class="card-img-top" alt="germany" height="200px">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>GERMANY</b></h4>
+                            <small class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
+                            <div id="star">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </div>
+                            <h5>Price : <b>$750.50</b></h5>
+                            <button type="button" class="btn btn-warning btn-sm mr-sm-2 text-white">Book
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mt-3">
+                    <div class="card">
+                        <img src="https://static.toiimg.com/thumb/80873764.cms?resizemode=75&width=1200&height=900"
+                            class="card-img-top" alt="paris" height="200px">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>PARIS</b></h4>
+                            <small class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
+                            <div id="star">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </div>
+                            <h5>Price : <b>$490.50</b></h5>
+                            <button type="button" class="btn btn-warning btn-sm mr-sm-2 text-white">Book
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mt-3">
+                    <div class="card">
+                        <img src="https://as1.ftcdn.net/v2/jpg/02/20/51/98/1000_F_220519874_uLcqyhWkvm1TWzBGNgedSJka7bpbR16C.jpg"
+                            class="card-img-top" alt="dubai" height="200px">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>DUBAI</b></h4>
+                            <small class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
+                            <div id="star">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </div>
+                            <h5>Price : <b>$400.00</b></h5>
+                            <button type="button" class="btn btn-warning btn-sm mr-sm-2 text-white">Book
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mt-3">
+                    <div class="card">
+                        <img src="https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg"
+                            class="card-img-top" alt="greece" height="200px">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>GREECE</b></h4>
+                            <small class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
+                            <div id="star">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                            </div>
+                            <h5>Price : <b>$750.00</b></h5>
+                            <button type="button" class="btn btn-warning btn-sm mr-sm-2 text-white">Book
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mt-3">
+                    <div class="card">
+                        <img src="https://wallpapers.com/images/hd/canada-cn-tower-photography-h6pglv90kqqf9wmc.jpg"
+                            class="card-img-top" alt="canada" height="200px">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>CANADA</b></h4>
+                            <small class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
+                            <div id="star">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </div>
+                            <h5>Price : <b>$390.50</b></h5>
+                            <button type="button" class="btn btn-warning btn-sm mr-sm-2 text-white">Book
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- services page content goes here -->
+        <div class="container mb-5 mt-5 services-section" id="services">
+            <h1 class="text-center"><span>S</span>REVICES</h1>
+            <div class="row">
+
+                <div class="col-md-6 col-sm-12 mt-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title text-center"><b>Affordable Hotel</b></h4>
+                            <p>Booking and reservation services for hotels, resorts, lodges, and vacation rentals</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 mt-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title text-center"><b>Food & Drinks</b></h4>
+                            <p>Engage travelers in interactive and educational experiences related to food and beverages
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 mt-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title text-center"><b>Travel Insurance</b></h4>
+                            <p>Offer travel insurance options to ensure travelers' safety and security during their
+                                trips
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 mt-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title text-center"><b>Transportation Assistance</b></h4>
+                            <p>Arrangement of airport transfers, car rentals, and transportation between destinations
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 mt-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title text-center"><b>Safety Guide</b></h4>
+                            <p>Be aware of your surroundings and trust your instincts</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 mt-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title text-center"><b>Wellness & Spa</b></h4>
+                            <p>Wellness retreats and spa for relaxation and rejuvenation</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Gallery page content goes here -->
+        <div class="container mb-5 mt-5 gallery-section" id="gallery">
+            <h1 class="text-center"><span>G</span>ALLERY</h1>
+
+            <div class="row">
+
+                <div class="col-md-4 col-sm-6 mt-3">
+                    <div class="card">
+                        <img src="https://4kwallpapers.com/images/walls/thumbs_3t/449.jpg" class="card-img-top"
+                            id="card-img-top" height="200px">
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mt-3">
+                    <div class="card">
+                        <img src="https://egokaiesi.files.wordpress.com/2015/01/cropped-10-breathtaking-views-1-622x415.jpg"
+                            class="card-img-top" id="card-img-top" height="200px">
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mt-3">
+                    <div class="card">
+                        <img src="https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2017/07/HandLuggageOnly-12-2.jpg?resize=1485%2C2048&ssl=1"
+                            class="card-img-top" id="card-img-top" height="200px">
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mt-3">
+                    <div class="card">
+                        <img src="https://www.kevmrc.com/wp-content/uploads/2018/05/paris-travel-10-best-views-of-the-eiffel-tower.jpg"
+                            class="card-img-top" id="card-img-top" height="200px">
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mt-3">
+                    <div class="card">
+                        <img src="https://wallpapers.com/images/featured/paragliding-c7c2lh5j37iy271c.jpg"
+                            class="card-img-top" id="card-img-top" height="200px">
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mt-3">
+                    <div class="card">
+                        <img src="https://finduslost.com/wp-content/uploads/2020/03/Winter-Hallstatt-Austria-FindUsLost-1060390.jpg"
+                            class="card-img-top" id="card-img-top" height="200px">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- About page content goes here -->
+        <div class="container-fluid mb-5 mt-5 about-section" id="about">
+            <h1 class="text-center"><span>A</span>BOUT</h1>
+
+            <div class="row mt-4">
+                <div class="col-md-6 col-sm-12">
+                    <img src="https://img.freepik.com/free-vector/gradient-world-tourism-day-background_52683-129652.jpg?w=900&t=st=1703332959~exp=1703333559~hmac=68feee29013258158c7a6cff510013d6b15300174cc1a0cfc3944d2ddb7f4247"
+                        alt="" srcset="" width="100%">
+                </div>
+                <div class="col-md-6 col-sm-12 mt-5">
+                    <h4>How <span style="font-weight: bold;"><span class="text-warning">T</span>ravel</span> Agency
+                        Works ?
+                    </h4>
+                    <p>
+                        Welcome to <span style="font-weight: bold;"><span class="text-warning">T</span>ravel</span>,
+                        your
+                        gateway to unforgettable travel experiences and seamless hotel bookings. We understand that
+                        every
+                        journey is a story waiting to be told, and we are here to make yours extraordinary. Whether
+                        you're a
+                        seasoned traveler or embarking on your first adventure, <span style="font-weight: bold;"><span
+                                class="text-warning">T</span>ravel</span> is your trusted companion in crafting the
+                        perfect
+                        getaway.
+                    </p>
+                    <p class="mt-4">
+                        At <span style="font-weight: bold;"><span class="text-warning">T</span>ravel</span>, excellence
+                        is
+                        not just a goal; it's a standard. We continuously strive to exceed your expectations by staying
+                        ahead of industry trends, partnering with reputable establishments, and leveraging technology to
+                        enhance your booking experience.
+                    </p>
+                    <a id="aboutViewMoreBtn" class="btn btn-warning btn-sm mr-sm-2 px-5 text-white"
+                        href="about.html">Read
+                        more...</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- footer content -->
+    <footer class="footer">
+        <div class="container text-center">
+            <h3 class="font-weight-bold"><span class="text-warning">T</span>RAVEL</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias deserunt voluptatem nisi quas</p>
+            <div class="social-icons">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            </div>
+            <p>Designed by <a href="#"><u>Author Name</u></a></p>
+            <p>&copy;Copyright | 2023 All Right Are Reserved
+            <p>
+        </div>
+    </footer>
+
+
+
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- font awesome -->
+    <script src="https://use.fontawesome.com/6197e43c13.js"></script>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
